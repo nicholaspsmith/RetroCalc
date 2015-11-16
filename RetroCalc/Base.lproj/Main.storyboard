@@ -5,6 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Minecraft.ttf">
+            <string>Minecraft</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -196,10 +201,14 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVb-xp-7EZ">
-                                <rect key="frame" x="411" y="39" width="189" height="38"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="4556" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVb-xp-7EZ">
+                                <rect key="frame" x="195" y="94" width="210" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Gcd-mJ-eoN"/>
+                                    <constraint firstAttribute="width" constant="210" id="ql0-LC-YMP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="30"/>
+                                <color key="textColor" red="0.32447838779999999" green="0.96892982719999998" blue="0.38128885629999998" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -207,6 +216,7 @@
                         <constraints>
                             <constraint firstItem="j7V-OM-JDI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9oq-bO-efv"/>
                             <constraint firstItem="DiS-1s-6GY" firstAttribute="centerY" secondItem="3oq-yW-LSr" secondAttribute="centerY" constant="35" id="CLy-6e-4so"/>
+                            <constraint firstItem="HVb-xp-7EZ" firstAttribute="leading" secondItem="3oq-yW-LSr" secondAttribute="leading" constant="20" id="H9n-FJ-1zj"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NIV-EP-WRt" secondAttribute="bottom" id="Nc2-ej-2x9"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="j7V-OM-JDI" secondAttribute="bottom" id="Tq4-aO-iLD"/>
                             <constraint firstItem="j7V-OM-JDI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="a28-iC-OqA"/>
@@ -216,6 +226,7 @@
                             <constraint firstItem="3oq-yW-LSr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fng-t7-cEY"/>
                             <constraint firstItem="3oq-yW-LSr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q6e-x8-LFI"/>
                             <constraint firstItem="NIV-EP-WRt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qoZ-8x-tmS"/>
+                            <constraint firstItem="HVb-xp-7EZ" firstAttribute="top" secondItem="3oq-yW-LSr" secondAttribute="top" constant="15" id="vds-fe-Ev5"/>
                         </constraints>
                     </view>
                 </viewController>
