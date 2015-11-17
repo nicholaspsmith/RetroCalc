@@ -7,8 +7,14 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var outputLbl: UILabel!
+    
+    var btnSound: AVAudioPlayer!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +26,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func numberPressed(btn: UIButton!) {
+        
+    }
 
 }
 
