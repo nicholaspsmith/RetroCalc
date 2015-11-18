@@ -36,6 +36,8 @@ class ViewController: UIViewController {
         
         let path = NSBundle.mainBundle().pathForResource("btn", ofType: "wav")
         
+        outputLbl.text = "0.0"
+        
         let soundUrl = NSURL(fileURLWithPath: path!)
         do {
             try btnSound = AVAudioPlayer(contentsOfURL: soundUrl)
@@ -76,24 +78,27 @@ class ViewController: UIViewController {
     func processOperation(op: Operation) {
         playSound()
         if currentOperation != Operation.Empty {
-            // Do math
-            rightValStr = runningNumber
-            runningNumber = ""
-            switch currentOperation {
-            case Operation.Multiply:
-                result = "\(Double(leftValStr)! * Double(rightValStr)!)"
-            case Operation.Divide:
-                result = "\(Double(leftValStr)! / Double(rightValStr)!)"
-            case Operation.Subtract:
-                result = "\(Double(leftValStr)! - Double(rightValStr)!)"
-            case Operation.Add:
-                result = "\(Double(leftValStr)! + Double(rightValStr)!)"
-            default: break
+            
+            // User selected operator and then another without first selecting a number
+            if runningNumber != "" {
+                rightValStr = runningNumber
+                runningNumber = ""
+                switch currentOperation {
+                case Operation.Multiply:
+                    result = "\(Double(leftValStr)! * Double(rightValStr)!)"
+                case Operation.Divide:
+                    result = "\(Double(leftValStr)! / Double(rightValStr)!)"
+                case Operation.Subtract:
+                    result = "\(Double(leftValStr)! - Double(rightValStr)!)"
+                case Operation.Add:
+                    result = "\(Double(leftValStr)! + Double(rightValStr)!)"
+                default: break
+                }
+                
+                leftValStr = result
+                outputLbl.text = result
             }
-            
-            leftValStr = result
-            outputLbl.text = result
-            
+
             currentOperation = op
         } else {
             // First time operator has been pressed
@@ -107,7 +112,8 @@ class ViewController: UIViewController {
         if btnSound.playing {
             btnSound.stop()
         }
-        btnSound.play()
+        // This is suuuuper annoying
+        // btnSound.play()
     }
 }
 
