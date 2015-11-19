@@ -28,7 +28,6 @@ class ViewController: UIViewController {
     var rightValStr = ""
     var currentOperation: Operation = Operation.Empty
     var result = ""
-
     
 
     override func viewDidLoad() {
@@ -75,6 +74,15 @@ class ViewController: UIViewController {
         processOperation(currentOperation)
     }
     
+    @IBAction func onClearPressed(sender: AnyObject) {
+        runningNumber = ""
+        leftValStr = ""
+        rightValStr = ""
+        currentOperation = Operation.Empty
+        result = ""
+        outputLbl.text = "0.0"
+    }
+    
     func processOperation(op: Operation) {
         playSound()
         if currentOperation != Operation.Empty {
@@ -115,5 +123,6 @@ class ViewController: UIViewController {
         // This is suuuuper annoying
         // btnSound.play()
     }
+    
 }
 

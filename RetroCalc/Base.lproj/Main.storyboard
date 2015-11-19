@@ -52,7 +52,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="DiS-1s-6GY">
-                                <rect key="frame" x="200" y="176" width="200" height="298"/>
+                                <rect key="frame" x="200" y="206" width="200" height="298"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="hBV-2n-oxM">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
@@ -256,14 +256,27 @@
                                 <color key="textColor" red="0.32447838779999999" green="0.96892982719999998" blue="0.38128885629999998" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Xy-mL-abm">
+                                <rect key="frame" x="252" y="163" width="95" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Jub-J0-6yO"/>
+                                    <constraint firstAttribute="width" constant="95" id="ijQ-eG-roU"/>
+                                </constraints>
+                                <state key="normal" image="clear"/>
+                                <connections>
+                                    <action selector="onClearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s0k-zu-i1W"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="NIV-EP-WRt" firstAttribute="top" secondItem="DiS-1s-6GY" secondAttribute="bottom" constant="25" id="3RF-is-Jqe"/>
                             <constraint firstItem="j7V-OM-JDI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9oq-bO-efv"/>
-                            <constraint firstItem="DiS-1s-6GY" firstAttribute="centerY" secondItem="3oq-yW-LSr" secondAttribute="centerY" constant="35" id="CLy-6e-4so"/>
+                            <constraint firstItem="DiS-1s-6GY" firstAttribute="centerY" secondItem="3oq-yW-LSr" secondAttribute="centerY" constant="60" id="CLy-6e-4so"/>
                             <constraint firstItem="HVb-xp-7EZ" firstAttribute="leading" secondItem="3oq-yW-LSr" secondAttribute="leading" constant="20" id="H9n-FJ-1zj"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NIV-EP-WRt" secondAttribute="bottom" id="Nc2-ej-2x9"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="j7V-OM-JDI" secondAttribute="bottom" id="Tq4-aO-iLD"/>
+                            <constraint firstItem="DiS-1s-6GY" firstAttribute="top" secondItem="9Xy-mL-abm" secondAttribute="bottom" constant="15" id="U7J-3q-H1X"/>
                             <constraint firstItem="j7V-OM-JDI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="a28-iC-OqA"/>
                             <constraint firstAttribute="trailing" secondItem="NIV-EP-WRt" secondAttribute="trailing" id="dIT-Ji-XNJ"/>
                             <constraint firstItem="DiS-1s-6GY" firstAttribute="centerX" secondItem="3oq-yW-LSr" secondAttribute="centerX" id="dXu-dl-Bw7"/>
@@ -271,6 +284,7 @@
                             <constraint firstItem="3oq-yW-LSr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fng-t7-cEY"/>
                             <constraint firstItem="3oq-yW-LSr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q6e-x8-LFI"/>
                             <constraint firstItem="NIV-EP-WRt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qoZ-8x-tmS"/>
+                            <constraint firstItem="9Xy-mL-abm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qqf-gS-8jE"/>
                             <constraint firstItem="HVb-xp-7EZ" firstAttribute="top" secondItem="3oq-yW-LSr" secondAttribute="top" constant="15" id="vds-fe-Ev5"/>
                         </constraints>
                     </view>
@@ -296,6 +310,7 @@
         <image name="9" width="111" height="114"/>
         <image name="add" width="111" height="114"/>
         <image name="backpanel" width="620" height="938"/>
+        <image name="clear" width="333" height="114"/>
         <image name="counter" width="516" height="133"/>
         <image name="divide" width="111" height="114"/>
         <image name="equal" width="111" height="114"/>
