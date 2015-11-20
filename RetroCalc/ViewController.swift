@@ -121,8 +121,9 @@ class ViewController: UIViewController {
             btnSound.stop()
         }
         // This is suuuuper annoying
-        // btnSound.play()
+         btnSound.play()
     }
+    
     
 }
 
